@@ -1,3 +1,9 @@
+document.addEventListener('DOMContentLoaded', (event) =>{
+
+  const searchButton = document.getElementById('searchButton');
+  searchButton.addEventListener('click', searchDogBreeds);
+});
+
 const apiKey = 'YOUR_API_KEY';  
 const apiUrl = 'https://api.thedogapi.com/v1/breeds';
 const imageApiUrl = 'https://api.thedogapi.com/v1/images/search';
