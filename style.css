@@ -17,6 +17,10 @@ img{
 }
 .breed-image {
     float: left;
-    width: 400px;
-    height: 700px;
+    width: 500px;
+    height: 500px;
+}
+#article{
+    float: right;
+    font-style: oblique;
 }
