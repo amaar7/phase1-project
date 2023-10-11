@@ -11,3 +11,12 @@ img{
     width: 400px;
     height: 700x;
 }
+.breed-container {
+    display: flex;
+    flex-direction: column;
+}
+.breed-image {
+    float: left;
+    width: 400px;
+    height: 700px;
+}

@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', (event) =>{
-
   const searchButton = document.getElementById('searchButton');
   searchButton.addEventListener('click', searchDogBreeds);
 });
 
-const apiKey = 'YOUR_API_KEY';  
+const apiKey = 'live_f9Yq8z8rsShfLEWXaSukamTDdSxmcnksny0LsmAoQGrd2bpcswRI3vF0kY1Q90eu';  
 const apiUrl = 'https://api.thedogapi.com/v1/breeds';
 const imageApiUrl = 'https://api.thedogapi.com/v1/images/search';
 
@@ -56,15 +55,18 @@ function displayResults(results) {
 
   results.forEach(result => {
     const breedElement = document.createElement('div');
+    breedElement.classList.add('breed-container');
 
     // Created an image element and set its source to the fetched image URL
     const imgElement = document.createElement('img');
     imgElement.src = result.imageUrl;
     imgElement.alt = result.breedName;
+    imgElement.classList.add('breed-image');
 
     // Created a paragraph element to display the breed name
     const breedNameElement = document.createElement('p');
     breedNameElement.textContent = result.breedName;
+    breedNameElement.classList.add('breed-name');
 
     // Appended the image and breed name to the breedElement
     breedElement.appendChild(imgElement);
