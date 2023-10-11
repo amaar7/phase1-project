@@ -1,3 +1,6 @@
+body {
+    background-color: #777;
+}
 #header{
     background-color: #666;
     padding: 30px;
@@ -20,7 +23,19 @@ img{
     width: 500px;
     height: 500px;
 }
-#article{
+#article {
     float: right;
-    font-style: oblique;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+#article h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+#article p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: white;
 }
