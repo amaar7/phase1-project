@@ -23,6 +23,7 @@ function searchDogBreeds() {
     .then(data => {
       const breedPromises = data
         .filter(breed => breed.name.toLowerCase().includes(breedInput))
+        .slice(0, 10) //it will display the first 10 
         .map(breed => {
           return fetch(`${imageApiUrl}?breed_ids=${breed.id}`, { headers })
             .then(response => {
