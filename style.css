@@ -17,12 +17,16 @@ body {
 }
 .breed-image {
     width: 250px;
-    height: 275px;
+    height: 265px;
+    border-radius: 30px;
 }
 #article {
     float: right;
     width: 50%;
     box-sizing: border-box;
+    background-color: #666;
+    padding: 10px;
+    width: 500px;
 }
 #article h4 {
     font-size: 18px;
@@ -38,11 +42,11 @@ body {
     font-size: 16px;
     line-height: 1.5;
     color: white;
-    width: 70%;
+    width: 80%;
     box-sizing: border-box;
     padding: 10px;
-    margin-left: 200px;
-    word-break: break-all;
+    margin-left: 100px;
+    word-break: break-word;
 }
 
 .breed-name{
@@ -50,8 +54,9 @@ body {
     padding: 5px;
     color: white;
     text-align: center;
-    width: 100%;
-    
+    width: 240px;
+    margin-top: 2px;
+    border-radius: 20px;
 }
 .breed-item{
     margin: 10px;
@@ -69,7 +74,7 @@ body {
     user-select: none;
     color: transparent;
     transition: color 0.3s;
-    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; /* Adds black shadow to create the effect */
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; 
 
 }
 .heart.liked {
