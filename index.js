@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', (event) =>{
+  searchDogBreeds();
   const searchButton = document.getElementById('searchButton');
   searchButton.addEventListener('click', searchDogBreeds);
 });
@@ -54,9 +55,13 @@ function displayResults(results) {
     return;
   }
 
+    // i Created a container to hold the images in a 3x3 grid
+    const gridContainer = document.createElement('div');
+    gridContainer.classList.add('grid-container');
+  
   results.forEach(result => {
     const breedElement = document.createElement('div');
-    breedElement.classList.add('breed-container');
+    breedElement.classList.add('breed-item');
 
     // Created an image element and set its source to the fetched image URL
     const imgElement = document.createElement('img');
@@ -73,6 +78,8 @@ function displayResults(results) {
     breedElement.appendChild(imgElement);
     breedElement.appendChild(breedNameElement);
 
-    breedResultsDiv.appendChild(breedElement);
+    gridContainer.appendChild(breedElement);
   });
+
+    breedResultsDiv.appendChild(gridContainer);
 }

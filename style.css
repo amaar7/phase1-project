@@ -9,44 +9,58 @@ body {
     color: white;
     margin-bottom: 5px;
 }
-img{
-    float: left;
-    width: 400px;
-    height: 700x;
-}
+
 .breed-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
 .breed-image {
-    float: left;
-    width: 500px;
-    height: 500px;
+    width: 250px;
+    height: 275px;
 }
 #article {
     float: right;
     width: 50%;
     box-sizing: border-box;
-    padding: 10px;
 }
 #article h4 {
     font-size: 18px;
     font-weight: bold;
     color: white;
+    width: 100%;
+    box-sizing: border-box;
+    clear: both;
+    margin-left: 206px;
 }
 #article p {
+    margin-top: -20px;
     font-size: 16px;
     line-height: 1.5;
     color: white;
+    width: 70%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-left: 200px;
+    word-break: break-all;
 }
 
 .breed-name{
     background-color: green;
     padding: 5px;
     color: white;
+    text-align: center;
+    width: 100%;
     
 }
 .breed-item{
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
 }
