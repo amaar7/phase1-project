@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', (event) =>{
   searchDogBreeds();
   const searchButton = document.getElementById('searchButton');
   searchButton.addEventListener('click', searchDogBreeds);
+  
 });
 
 const apiKey = 'live_f9Yq8z8rsShfLEWXaSukamTDdSxmcnksny0LsmAoQGrd2bpcswRI3vF0kY1Q90eu';  
@@ -74,9 +75,20 @@ function displayResults(results) {
     breedNameElement.textContent = result.breedName;
     breedNameElement.classList.add('breed-name');
 
-    // Appended the image and breed name to the breedElement
+    const heartElement = document.createElement('span');
+    heartElement.textContent = '❤️';
+    heartElement.classList.add('heart');
+
+    heartElement.addEventListener('click', () => {
+      heartElement.classList.toggle('liked');
+
+    });
+
+    // Appended the image and breed name to the breedElement and also like heartElement
     breedElement.appendChild(imgElement);
     breedElement.appendChild(breedNameElement);
+    breedElement.appendChild(heartElement);
+
 
     gridContainer.appendChild(breedElement);
   });

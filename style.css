@@ -64,3 +64,15 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
 }
+.heart {
+    cursor: pointer;
+    user-select: none;
+    color: transparent;
+    transition: color 0.3s;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; /* Adds black shadow to create the effect */
+
+}
+.heart.liked {
+    color: red;
+    text-shadow: none;
+}
