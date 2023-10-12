@@ -81,6 +81,9 @@ function displayResults(results) {
 
     heartElement.addEventListener('click', () => {
       heartElement.classList.toggle('liked');
+      if (heartElement.classList.contains('liked')) {
+        alert('Good choice!');
+      }
 
     });
 
